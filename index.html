@@ -3,108 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talking Ape - Coming Soon</title>
-    <meta name="description" content="Talking Ape - Australian Tax Return Assistance. Coming Soon.">
+    <title>Talking Ape - Tax Wisdom, Evolved</title>
+    <meta name="description" content="Talking Ape - Australian Tax Return Assistance. Tax wisdom, evolved.">
     <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://talkingape.com.au/">
+    <meta property="og:title" content="Talking Ape - Tax Wisdom, Evolved">
+    <meta property="og:description" content="Australian Tax Return Assistance. Tax wisdom, evolved.">
+    <meta property="og:image" content="talking-ape-og-1200x630.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Talking Ape - Tax Wisdom, Evolved">
+    <meta name="twitter:description" content="Australian Tax Return Assistance. Tax wisdom, evolved.">
+    <meta name="twitter:image" content="talking-ape-og-1200x630.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="talking-ape-favicon-64.png">
+    <link rel="apple-touch-icon" href="talking-ape-logo-512.png">
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #1a3a3a;
         }
-        .container {
-            text-align: center;
-            padding: 2rem;
-            max-width: 600px;
+
+        /* Desktop: Full hero image */
+        .hero-desktop {
+            display: block;
+            width: 100%;
+            height: 100vh;
+            background-image: url('talking-ape-hero-1920x1080.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-        .logo {
-            font-size: 4rem;
-            margin-bottom: 1rem;
+
+        /* Mobile: Different layout */
+        .hero-mobile {
+            display: none;
+            width: 100%;
+            height: 100vh;
+            background-image: url('talking-ape-mobile-750x1334.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(90deg, #e94560, #f39c12);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .tagline {
-            font-size: 1.2rem;
-            color: #a0a0a0;
-            margin-bottom: 2rem;
-        }
+
+        /* Coming Soon Badge */
         .coming-soon {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50px;
-            border: 1px solid rgba(255,255,255,0.2);
-            font-size: 1.1rem;
-            letter-spacing: 2px;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 12px 30px;
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            border-radius: 30px;
+            color: #d4af37;
+            font-size: 14px;
+            letter-spacing: 3px;
             text-transform: uppercase;
+            backdrop-filter: blur(10px);
         }
-        .features {
-            margin-top: 3rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
-            text-align: center;
-        }
-        .feature {
-            padding: 1rem;
-            background: rgba(255,255,255,0.05);
-            border-radius: 10px;
-        }
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        .feature-text {
-            font-size: 0.9rem;
-            color: #a0a0a0;
-        }
-        footer {
-            margin-top: 3rem;
-            color: #666;
-            font-size: 0.8rem;
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .hero-desktop {
+                display: none;
+            }
+            .hero-mobile {
+                display: block;
+            }
+            .coming-soon {
+                bottom: 20px;
+                padding: 10px 20px;
+                font-size: 12px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">🦍</div>
-        <h1>Talking Ape</h1>
-        <p class="tagline">Australian Tax Return Assistance</p>
-        <div class="coming-soon">Coming Soon</div>
-
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">📋</div>
-                <div class="feature-text">Step-by-step<br>Guidance</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🔒</div>
-                <div class="feature-text">Privacy<br>First</div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🇦🇺</div>
-                <div class="feature-text">ATO<br>Compliant</div>
-            </div>
-        </div>
-
-        <footer>
-            &copy; 2026 Talking Ape. All rights reserved.
-        </footer>
-    </div>
+    <div class="hero-desktop"></div>
+    <div class="hero-mobile"></div>
+    <div class="coming-soon">Coming Soon</div>
 </body>
 </html>
